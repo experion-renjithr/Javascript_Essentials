@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Understanding constructors</title>
+	<script type="text/javascript">
+
+		function ConstructApple(color,width,height){
+			this.color=color;
+			this.width=width;
+			this.height=height;
+		}
+
+		ConstructApple.prototype = {
+			eat:function(){ return 'eat that apple: '+this.color+" apple"; },
+			throw:function(){ return 'THROW it!: '+this.color+" apple"; },
+			nibble:function(){ return 'nibble like a hamster: '+this.color+" apple";}
+		}
+
+		var apple1 = new ConstructApple("red",200,150);
+		var apple2 = new ConstructApple("green",300,220);
+		var apple3 = new ConstructApple("red",280,167);
+
+
+		document.write(apple1.eat()+"<br><br>");
+		document.write(apple2.throw()+"<br><br>");
+		document.write(apple3.nibble());
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
